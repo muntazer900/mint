@@ -63,7 +63,7 @@ async def play(c: Client, m: Message):
         ]
     )
     if m.sender_chat:
-        return await m.reply_text(انت مستخدم مجههول __لايمكنك__ !\n\n» استخدام هذا البوت.")
+        return await m.reply_text("انت'مستخدم __مجهول__ !\n\n» لايمكنك استخدام هذا البوت الان .")
     try:
         aing = await c.get_me()
     except Exception as e:
