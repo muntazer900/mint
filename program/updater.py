@@ -49,14 +49,14 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command(["حدث", f"update@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `جاري التحديث...`")
+    msg = await message.reply("🔄 `processing update...`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅انتهى التحديث\n\n • أعيد تشغيل الروبوت ، وعاد نشطًا مرة أخرى خلال دقيقة واحدة.")
+        await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
