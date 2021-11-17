@@ -16,14 +16,14 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@Client.on_message(command(["search", f"search@{BOT_USERNAME}"]))
+@Client.on_message(command(["رابط", f"search@{BOT_USERNAME}"]))
 async def ytsearch(_, message: Message):
 
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "🗑 Close", callback_data="cls",
+                    "🗑 اغلاق", callback_data="cls",
                 )
             ]
         ]
@@ -31,10 +31,10 @@ async def ytsearch(_, message: Message):
 
     try:
         if len(message.command) < 2:
-            await message.reply_text("/search **needs an argument !**")
+            await message.reply_text("لم اجد شيئا **اعطني اسم كامل !**")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("🔎 **Searching...**")
+        m = await message.reply_text("🔎 **جاري البحث...**")
         results = YoutubeSearch(query, max_results=5).to_dict()
         i = 0
         text = ""
