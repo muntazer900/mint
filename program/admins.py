@@ -15,7 +15,7 @@ from pyrogram.types import (
 
 
 bttn = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🔙رجوع", callback_data="cbmenu")]]
+    [[InlineKeyboardButton("🔙 رجوع", callback_data="cbmenu")]]
 )
 
 
@@ -34,7 +34,8 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ بوت **تم اعادة تشغيلة !**\n✅ **تم تحديث** قائمة **المشرفين !**"
+        "✅ بوت **اعيد تحميلة بشكل صحيح !**\n✅ **تم تحديث** قائمة **المشرفين !**"
+    )
 
 
 @Client.on_message(command(["تخطي", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
