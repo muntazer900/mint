@@ -2,7 +2,7 @@
 
 ## 🧪 احصل على كود ترمكس من هنا:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@muntazer900/stkhrj-kwd-trmks-hn#main.py) ``Pyrogram``
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@muntazer900/stkhrj-kwd-trmks-hn?v=1) ``Pyrogram``
 
 
 
